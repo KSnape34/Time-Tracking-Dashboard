@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --background-blue: 	hsl(240, 64%, 27%);
+    --background-blue-hover: hsl(240, 38%, 53%);
+    --user-card-background: hsl(261, 100%, 54%);
+    --font-color-purple: hsl(240, 100%, 90%);
+    --font-color-purple-user: hsl(252, 63%, 54%);
+    --font-color-white: hsl(0, 0%, 98%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --social: #7F00FF;
+    --exercise: hsl(145, 58%, 55%);
+    --self-care: hsl(43, 84%, 65%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+    color: var(--font-color-white);
+    background-color: rgb(2, 2, 27);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    width: 45%;
+    height: auto;
+    border: 3px solid var(--font-color-white);
+    border-radius: 50%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 1fr;
+    grid-template-areas: 
+    'user-card  work  play  study'
+    'user-card  exercise  social  self-care'
+    ;
+    gap: 3rem;
+    width: 80%;
+    margin: 2.5% auto;
+}
+
+
+.user-card {
+    grid-area: user-card;
+}
+
+#user-card-top {
+    background-color: var(--user-card-background);
+    border-radius: 1.6rem;
+    font-size: 4rem;
+    padding: 0.75em;
+    position: relative;
+    z-index: 2;
+}
+
+#user-card-top span {
+    display: block;
+}
+
+.report-for {
+    color: var(--font-color-purple);
+    font-size: 1.4rem;
+}
+
+
+#user-card-btm {
+    background-color: var(--background-blue);
+    border-radius: 1.6rem;
+    padding: 2em 2em 1em 2em;
+    font-size: 1.8rem;
+    position: relative;
+    top: -2.5rem;
+    height: 30%;
+}
+
+#user-card-btm p:hover {
+    cursor: pointer;
+    color: var(--background-blue-hover);
+}
+
+.grid-item-parent {
+    border-radius: 1.6rem;
+}
+
+svg {
+    float: right;
+}
+
+.grid-item {
+    position: relative;
+    height: 80%;
+    bottom: -20%;
+    background-color: var(--background-blue);
+    border-radius: 1.2rem;
+}
+
+.grid-item-row1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    padding: 0 1em;
+}
+
+.grid-item-row2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2.5em;
+}
+
+.grid-item-row2 p span {
+    font-size: 1.6rem;
+    display: block;
+    color: var(--font-color-purple);
+    margin-top: 25px;
+   
+}
+
+.work {
+    position: relative;
+    grid-area: work;
+    background-color: var(--work);
+}
+
+.play {
+    position: relative;
+    grid-area: play;
+    background-color: var(--play);
+}
+
+.study {
+    position: relative;
+    grid-area: study;
+    background-color: var(--study);
+}
+
+.exercise {
+    position: relative;
+    grid-area: exercise;
+    background-color: var(--exercise);
+}
+
+.social {
+    grid-area: social;
+    position: relative;
+    background-color: var(--social);
+}
+
+
+.self-care {
+    position: relative;
+    grid-area: self-care;
+    background-color: var(--self-care);
+}
+
+.icon {
+    position:absolute;
+    top: 5px;
+    right: 20px;
+}
+
+@media (max-width: 950px) {
+    .grid-container {
+        grid-template-columns: minmax(250px,300px);
+        justify-content: center;
+        grid-template-areas: 
+        'user-card'  
+        'work'  
+        'play'  
+        'study'
+        'exercise'  
+        'social'  
+        'self-care'
+        ;
+        width: 90%;
+    }
+
+ 
+    #user-card-btm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+}
