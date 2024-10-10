@@ -29,8 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![Time Tracker Dashboard](https://github.com/user-attachments/assets/3c5fad1e-e32d-4d7a-9df3-ddb6d13cdd28)
 
 
 ### Links
@@ -54,7 +53,7 @@ Users should be able to:
 
 - Website - [Katie Snape](https://ksnape34.github.io/Portfolio/)
 - Frontend Mentor - [@KSnape34](https://www.frontendmentor.io/profile/KSnape34)
-- GitHub - [@KSnape34](https://github.com/KSnape34)
+- LinkedIn - [@KatieSnape](www.linkedin.com/in/katie-snape-4a3151305)
 
 
 
